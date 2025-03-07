@@ -1,0 +1,31 @@
+create database Salespeople
+create table Salesman (Salesman_id int,Name varchar (50),City varchar (50),	Commission float)
+Insert into Salesman values
+        (5001,'James Hoog','New York',      0.15),
+        (5002,'Nail Knite','Paris'   ,      0.13),
+        (5005,'Pit Alex'  ,'London'  ,      0.11),
+        (5006,'Mc Lyon'   ,'Paris'   ,      0.14),
+        (5007,'Paul Adam' ,'Rome'    ,      0.13),
+        (5003,'Lauson Hen','San Jose',      0.12)
+
+		--Task 1,2,3
+		Select  * from Salesman where City ='Paris' or City='Rome'
+		Select  * from Salesman where City ='London' or City='New York'
+		Select  * from Salesman where City <>'Paris'
+		Select  * from Salesman where City like 'P%'
+		Select  * from Salesman where City <>'Rome'
+		--Task 4
+		Select * from customer where customer_id=3007 or customer_id=3008 or customer_id=3009
+		Select * from customer where customer_id in (3007,3008,3009)
+		--Task 5
+		Select * from salesman where commission > =0.12 and commission <=0.14
+		--Task 6
+		Select * from orders where purch_amt between 500 and 4000 and purch_amt not in (948.5,1983.43)
+		--Task 7
+		Select * from salesman where name between 'A' and 'L' 
+		--Task 8
+		Select * from salesman where name not between 'A' and 'L' 
+		--Task 9
+		Select * from customer where cust_name like 'B%'
+		--Task 10
+		Select * from customer where cust_name like '%N'
